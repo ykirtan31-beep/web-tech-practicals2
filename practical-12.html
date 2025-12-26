@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional & Loop Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 25px;
+    }
+    .container {
+      max-width: 650px;
+      background: white;
+      padding: 25px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    pre {
+      background: #222;
+      color: #00ff00;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 17px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background: #2196F3;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0b7dda;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>JavaScript: Conditional & Loops</h1>
+    <button onclick="runProgram()">Run Program</button>
+
+    <pre id="output">Click the button to see results...</pre>
+  </div>
+
+  <script>
+    function runProgram() {
+      let text = "";
+
+      // 🌟 Conditional Statement
+      let age = 18;
+      if (age >= 18) {
+        text += "Conditional Statement Result:\n✔ You are eligible to vote.\n\n";
+      } else {
+        text += "Conditional Statement Result:\n✖ You are not eligible to vote.\n\n";
+      }
+
+      // 🌟 For Loop
+      text += "FOR LOOP:\n";
+      for (let i = 1; i <= 5; i++) {
+        text += "Number = " + i + "\n";
+      }
+      text += "\n";
+
+      // 🌟 While Loop
+      text += "WHILE LOOP:\n";
+      let x = 1;
+      while (x <= 5) {
+        text += "Count = " + x + "\n";
+        x++;
+      }
+      text += "\n";
+
+      // 🌟 Do...While Loop
+      text += "DO-WHILE LOOP:\n";
+      let y = 1;
+      do {
+        text += "Value = " + y + "\n";
+        y++;
+      } while (y <= 5);
+
+      document.getElementById("output").innerText = text;
+    }
+  </script>
+
+</body>
+</html>

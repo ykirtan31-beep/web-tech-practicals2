@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            width: 300px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            background: #1e293b;
+            transition: 0.3s;
+        }
+
+        .highlight {
+            background: #22c55e;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #38bdf8;
+            color: black;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+
+        .key-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #334155;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Listeners: Mouse + Keyboard</h2>
+    <p>Hover, Click buttons, or Press keys 🎯</p>
+
+    <div class="card" id="card">
+        Hover or Click Me
+    </div>
+
+    <button id="add">Add Events</button>
+    <button id="remove">Remove Events</button>
+
+    <div class="key-box" id="keyBox">
+        Press any key on keyboard
+    </div>
+
+    <script>
+        const card = document.getElementById("card");
+        const addBtn = document.getElementById("add");
+        const removeBtn = document.getElementById("remove");
+        const keyBox = document.getElementById("keyBox");
+
+        // Mouse event functions
+        function mouseEnter() {
+            card.classList.add("highlight");
+            card.textContent = "Mouse Over!";
+        }
+
+        function mouseLeave() {
+            card.classList.remove("highlight");
+            card.textContent = "Hover or Click Me";
+        }
+
+        function mouseClick() {
+            card.textContent = "Clicked!";
+        }
+
+        // Keyboard event function
+        function keyPressed(event) {
+            keyBox.textContent = `Key Pressed: ${event.key}`;
+        }
+
+        // Add event listeners
+        addBtn.addEventListener("click", () => {
+            card.addEventListener("mouseenter", mouseEnter);
+            card.addEventListener("mouseleave", mouseLeave);
+            card.addEventListener("click", mouseClick);
+            document.addEventListener("keydown", keyPressed);
+
+            alert("Events Added!");
+        });
+
+        // Remove event listeners
+        removeBtn.addEventListener("click", () => {
+            card.removeEventListener("mouseenter", mouseEnter);
+            card.removeEventListener("mouseleave", mouseLeave);
+            card.removeEventListener("click", mouseClick);
+            document.removeEventListener("keydown", keyPressed);
+
+            alert("Events Removed!");
+        });
+    </script>
+
+</body>
+</html>

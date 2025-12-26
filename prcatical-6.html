@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline, Internal, and External CSS Example</title>
+
+  <!-- External CSS file link -->
+  <link rel="stylesheet" href="external6.css">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkblue;
+      text-decoration: underline;
+    }
+
+    p {
+      color: green;
+      font-size: 18px;
+    }
+
+    .internal-box {
+      background-color: lightgray;
+      border: 2px solid black;
+      padding: 10px;
+      margin: 20px auto;
+      width: 50%;
+    }
+   
+  </style>
+</head>
+<body>
+  <!-- Inline CSS -->
+  <h1 style="color:rgb(11, 106, 144); text-transform: uppercase;">Welcome to CSS Styling</h1>
+
+  <p>This paragraph uses <b>internal CSS</b> for styling.</p>
+
+  <div class="internal-box">
+    This box is styled using <b>internal CSS</b>.
+  </div>
+
+  <div class="external-box">
+    This box is styled using <b>external CSS</b>.
+  </div>
+</body>
+</html>
