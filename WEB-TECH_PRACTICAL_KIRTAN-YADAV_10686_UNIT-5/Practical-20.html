@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI/ML Software Engineer | Portfolio</title>
+  <meta name="description" content="Executive-level portfolio of an AI/ML Software Engineer focused on production-grade machine learning systems, research, and scalable software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #11162a;
+      --primary: #4f7cff;
+      --secondary: #22d3ee;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 600px at top, #0f172a, var(--bg));
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem;
+      display: flex; justify-content: center; align-items: center;
+      position: relative;
+    }
+
+    .center-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .center-name:hover {
+      color: var(--primary);
+      text-shadow:
+        0 0 8px rgba(79,124,255,0.6),
+        0 0 16px rgba(79,124,255,0.5),
+        0 0 32px rgba(79,124,255,0.35);
+    }
+
+    .nav-links {
+      position: absolute;
+      right: 1.5rem;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem; font-size: 0.95rem; color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 3rem; align-items: center;
+    }
+
+    .hero h1 { font-size: 3.1rem; line-height: 1.15; margin-bottom: 1rem; }
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 620px; }
+
+    .hero-actions { margin-top: 2rem; display: flex; gap: 1rem; }
+
+    .btn {
+      padding: 0.8rem 1.5rem; border-radius: 0.75rem; font-weight: 500;
+      border: 1px solid var(--border); background: var(--card);
+      transition: all 0.2s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #020617; border: none;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+
+    .hero-image {
+      aspect-ratio: 1 / 1; border-radius: 1.5rem;
+      background: linear-gradient(135deg, #1e293b, #020617);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); text-align: center; padding: 1rem;
+    }
+
+    section { margin-top: 6rem; }
+    .section-title { font-size: 2rem; margin-bottom: 2rem; }
+    .section-title span { color: var(--primary); }
+
+    .about { max-width: 900px; font-size: 1.05rem; color: var(--muted); }
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 1.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+      box-shadow:
+        0 0 0 1px rgba(79,124,255,0.3),
+        0 10px 40px rgba(79,124,255,0.25);
+    }
+
+    .card h3 { margin-bottom: 0.6rem; font-size: 1.15rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+    }
+
+    footer {
+      margin-top: 6rem; padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center; color: var(--muted); font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.4rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo center-name">Kirtan-Yadav</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>AI & Machine Learning <span>Software Engineer</span></h1>
+      <p>
+        I build production-grade AI systems that combine machine learning, deep learning, and scalable software engineering. My focus is on transforming research and data into reliable, high-impact products.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="WhatsApp Image 2025-12-21 at 5.15.41 PM.jpeg"length="500px"width="500px">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">Professional <span>Profile</span></h2>
+    <p class="about">
+      I am an AI/ML Software Engineer with expertise across the full machine learning lifecycle—data engineering, model development, evaluation, deployment, and monitoring. I work at the intersection of research and real-world systems, ensuring that models are not only accurate, but also scalable, interpretable, and maintainable in production environments.
+      <br/><br/>
+      My background includes strong foundations in algorithms, probability, and system design, enabling me to collaborate effectively with research scientists, product teams, and infrastructure engineers.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">Technical <span>Expertise</span></h2>
+    <div class="skills-grid">
+      <div class="card"><h3>Machine Learning</h3><p>Supervised & unsupervised learning, feature engineering, model validation, optimization, and statistical analysis.</p></div>
+      <div class="card"><h3>Deep Learning</h3><p>CNNs, RNNs, transformers, representation learning, PyTorch & TensorFlow.</p></div>
+      <div class="card"><h3>MLOps</h3><p>Model versioning, CI/CD pipelines, monitoring, experiment tracking, reproducibility.</p></div>
+      <div class="card"><h3>Data Engineering</h3><p>ETL pipelines, data preprocessing, SQL, scalable data workflows.</p></div>
+      <div class="card"><h3>Backend & APIs</h3><p>REST APIs, microservices, performance optimization, clean architecture.</p></div>
+      <div class="card"><h3>Tools & Platforms</h3><p>Python, Docker, Git, Linux, cloud-native ML deployments.</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Selected <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="card"><h3>Intelligent Prediction System</h3><p>End-to-end ML pipeline delivering real-time predictions with automated retraining and monitoring.</p></div>
+      <div class="card"><h3>Deep Learning NLP Engine</h3><p>Transformer-based text understanding system optimized for performance and scalability.</p></div>
+      <div class="card"><h3>MLOps Platform</h3><p>Reusable infrastructure for experiment tracking, deployment, and model lifecycle management.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="about">Open to opportunities, collaborations, and research discussions. Send a message below.</p>
+
+    <form class="card" style="max-width:600px; margin-top:2rem;">
+      <div style="display:grid; gap:1rem;">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Organization / Company" />
+        <select required>
+          <option value="">Reason for Contact</option>
+          <option>Job Opportunity</option>
+          <option>Research Collaboration</option>
+          <option>Project / Freelance</option>
+          <option>General Inquiry</option>
+        </select>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</
+
+</main>
+
+<footer>
+  © 2026 AI/ML Software Engineer · Optimized for recruiters, research, and startups
+</footer>
+
+</body>
+</html>
